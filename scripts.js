@@ -52,7 +52,7 @@ function playRound(humanChoice, computerChoice) {
 }
 
 /* 
-TO DO: work on playGame (5 rounds then final winner), work on scoring system, work on styles
+TO DO: work on playGame (5 rounds then final winner), work on styles
 */
 
  /*  function playGame(){
