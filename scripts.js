@@ -1,6 +1,10 @@
 let humanScore = 0;
 let computerScore = 0;
 
+const playerChoice = document.getElementById("playerChoice");
+const computerChoice = document.getElementById("computerChoice");
+const resultRound = document.getElementById("resultRound");
+
 function getComputerChoice(){
     let number = Math.random().toFixed(3);
     let choice;
@@ -11,40 +15,50 @@ function getComputerChoice(){
     } else {
         choice = "Scissors";
     }
+    computerChoice.textContent = `Computer: ${choice}`;
     return choice;
 }
 
-/* Left in on next commit to show original function, will clean up in final
-function getHumanChoice(val){
-    console.log(val);
-    return val;
-} */
-
 function playRound(humanChoice, computerChoice) {
     let message;
-    console.log("You picked: " + humanChoice);
-    console.log("The computer picked: " + computerChoice);
-    if (humanChoice==computerChoice){
+    if (humanChoice===computerChoice){
         message = "Tie!";
-    } else if (humanChoice=="Rock" && computerChoice=="Paper"){
+    } else if (humanChoice==="Rock" && computerChoice==="Paper"){
         computerScore++;
         message = "You lose! Paper beats rock.";
-    } else if (humanChoice=="Rock" && computerChoice=="Scissors"){
+    } else if (humanChoice==="Rock" && computerChoice==="Scissors"){
         humanScore++;
         message = "You win! Rock beats scissors.";
-    } else if (humanChoice=="Paper" && computerChoice=="Rock"){
+    } else if (humanChoice==="Paper" && computerChoice==="Rock"){
         humanScore++;
         message = "You win! Paper beats rock.";
-    } else if (humanChoice=="Paper" && computerChoice=="Scissors"){
+    } else if (humanChoice==="Paper" && computerChoice==="Scissors"){
         computerScore++;
         message = "You loose! Paper beats rock.";
-    } else if (humanChoice=="Scissors" && computerChoice=="Paper"){
+    } else if (humanChoice==="Scissors" && computerChoice==="Paper"){
         humanScore++;
         message = "You win! Scissors beats paper.";
     } else {
         computerScore++;
         message = "You loose! Rock beats scissors.";
     }
-    console.log(message);
-    return message;
-  }
+
+    playerChoice.textContent = `Player: ${humanChoice}`;
+    resultRound.textContent = `${message}`;
+}
+
+
+ /*  function playGame(){
+    let message;
+    for (let i=0; i<5; i++){
+        if (humanScore == 3){
+            message = "ROUND: " + i+1 + " GAME OVER: YOU WIN!"
+        } else if (computerScore == 3) {
+             message = "ROUND: " + i+1 + " GAME OVER: YOU LOOSE!"
+        } else {
+            message = "ROUND: " + i+1 + " PLAY NEXT";
+        }
+        console.log(message);
+        return message;
+    }
+  } */
