@@ -9,11 +9,22 @@
 </head>
 <body>
     <h1>Rock Paper Scissors</h1>
+    <h2>Score:</h2>
+    <ul>
+        <li>You:</li>
+        <li>Computer:</li>
+    </ul>
     <h3>Choose one of the following options</h3>
     <ul>
-        <li><button value="Rock" onclick="getHumanChoice(this.value)">Rock</button></li>
-        <li><button value="Paper" onclick="getHumanChoice(this.value)">Paper</button></li>
-        <li><button value="Scissors" onclick="getHumanChoice(this.value)">Scissors</button></li>
+        <!-- /* Left in on next commit to show original function, will clean up in final
+        <li><button id="1" value="Rock" onclick="getHumanChoice(this.value)">Rock</button></li>
+        <li><button id="2" value="Paper" onclick="getHumanChoice(this.value)">Paper</button></li>
+        <li><button id="3" value="Scissors" onclick="getHumanChoice(this.value)">Scissors</button></li>
+ -->
+        <li><button onclick="playRound('Rock', getComputerChoice())">Rock</button></li>
+        <li><button onclick="playRound('Paper', getComputerChoice())">Paper</button></li>
+        <li><button onclick="playRound('Scissors', getComputerChoice())">Scissors</button></li>
     </ul>
+    <h3>Round Winner:</h3>
 </body>
 </html>
