@@ -13,4 +13,6 @@ function getComputerChoice(){
     return choice;
 }
 
-console.log(getComputerChoice());
+function getHumanChoice(val){
+    return val;
+}
