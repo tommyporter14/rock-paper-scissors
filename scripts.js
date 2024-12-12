@@ -4,6 +4,8 @@ let computerScore = 0;
 const playerChoice = document.getElementById("playerChoice");
 const computerChoice = document.getElementById("computerChoice");
 const resultRound = document.getElementById("resultRound");
+const playerScoreDisplay = document.getElementById("playerScoreDisplay");
+const computerScoreDisplay = document.getElementById("computerScoreDisplay");
 
 function getComputerChoice(){
     let number = Math.random().toFixed(3);
@@ -45,8 +47,13 @@ function playRound(humanChoice, computerChoice) {
 
     playerChoice.textContent = `Player: ${humanChoice}`;
     resultRound.textContent = `${message}`;
+    playerScoreDisplay.textContent = `Your Score: ${humanScore}`;
+    computerScoreDisplay.textContent = `Computer's Score: ${computerScore}`;
 }
 
+/* 
+TO DO: work on playGame (5 rounds then final winner), work on scoring system, work on styles
+*/
 
  /*  function playGame(){
     let message;
