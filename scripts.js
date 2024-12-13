@@ -93,7 +93,3 @@ function playRound(humanChoice, computerChoice) {
     playerScoreDisplay.textContent = `Your Score: ${humanScore}`;
     computerScoreDisplay.textContent = `Computer's Score: ${computerScore}`;
 }
-
-/* 
-TO DO: work on styles
-*/
